@@ -1,0 +1,107 @@
+[
+  {
+    "model": "catalog.category",
+    "pk": 1,
+    "fields": {
+      "name": "Электрический",
+      "description": "включает покемонов электрического типа."
+    }
+  },
+  {
+    "model": "catalog.category",
+    "pk": 2,
+    "fields": {
+      "name": "Водный",
+      "description": "включает покемонов водного типа."
+    }
+  },
+  {
+    "model": "catalog.category",
+    "pk": 3,
+    "fields": {
+      "name": "Огненный",
+      "description": "включает покемонов огненного типа."
+    }
+  },
+  {
+    "model": "catalog.category",
+    "pk": 4,
+    "fields": {
+      "name": "Травяной",
+      "description": "включает покемонов травяного типа."
+    }
+  },
+  {
+    "model": "catalog.category",
+    "pk": 5,
+    "fields": {
+      "name": "Земляной",
+      "description": "включает покемонов земляного типа."
+    }
+  },
+  {
+    "model": "catalog.product",
+    "pk": 11,
+    "fields": {
+      "name": "Пикачу",
+      "description": "Пикачу́ (яп. ピカチュウ Пикатю:, англ. Pikachu) — покемон-мышь электрического типа, самый узнаваемый покемон, талисман серии, в последние годы ставший иконой японской поп-культуры.",
+      "image": "Pikachu.png",
+      "category": 1,
+      "unit_price": 9200,
+      "date_of_creation": "2023-11-14",
+      "last_modified_date": "2024-01-28"
+    }
+  },
+  {
+    "model": "catalog.product",
+    "pk": 12,
+    "fields": {
+      "name": "Бульбазавр",
+      "description": "Бульбаза́вр (яп. フシギダネ Фусигиданэ, англ. Bulbasaur) — вместе с Чармандером и Сквиртлом один из стартовых покемонов региона Канто. Его типы — травяной и ядовитый.",
+      "image": "Бульбазавр.png",
+      "category": 5,
+      "unit_price": 7800,
+      "date_of_creation": "2023-11-14",
+      "last_modified_date": "2024-01-28"
+    }
+  },
+  {
+    "model": "catalog.product",
+    "pk": 13,
+    "fields": {
+      "name": "Чармандер",
+      "description": "Чарманде́р (яп. ヒトカゲ Хитокагэ, англ. Charmander) — огненный покемон-ящерица, вместе со Сквиртлом и Бульбазавром является стартовым покемоном региона Канто. На кончике хвоста Чармандера горит пламя, по которому можно узнать его самочувствие и настроение.",
+      "image": "Charmander.png",
+      "category": 3,
+      "unit_price": 4700,
+      "date_of_creation": "2023-11-14",
+      "last_modified_date": "2024-01-28"
+    }
+  },
+  {
+    "model": "catalog.product",
+    "pk": 14,
+    "fields": {
+      "name": "Сквиртл",
+      "description": "Сквиртл (яп. ゼニガメ Дзэнигамэ, англ. Squirtle) — водный покемон-черепаха, как и Чармандер и Бульбазавр, стартовый покемон региона Канто. В случае опасности Сквиртл прячется в панцирь, мягкий при рождении покемона, но вскоре затвердевающий.",
+      "image": "Pokémon_Squirtle_art.png",
+      "category": 2,
+      "unit_price": 2500,
+      "date_of_creation": "2023-11-14",
+      "last_modified_date": "2024-01-28"
+    }
+  },
+  {
+    "model": "catalog.product",
+    "pk": 15,
+    "fields": {
+      "name": "Сэндслэш",
+      "description": "Сэ́ндслэш (яп. サンドパン Сандопан, англ. Sandslash) — эволюционная форма Сэндшру. При эволюции у него на спине появляются шипы, при помощи которых покемон защищается.",
+      "image": "ru110143II0003f6e2f41b807f44749118fca3fc00126.jpg",
+      "category": 4,
+      "unit_price": 1500,
+      "date_of_creation": "2023-11-14",
+      "last_modified_date": "2024-01-28"
+    }
+  }
+]
