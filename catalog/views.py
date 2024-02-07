@@ -1,29 +1,43 @@
 from django.shortcuts import render, get_object_or_404
+from django.urls import reverse_lazy
+from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView
 
-from catalog.models import Product
+from catalog.models import Product, Blog
 
 
-def catalog(request):
-    product_list = Product.objects.all()
-    context = {
-        'object_list': product_list,
-        'title': 'Каталог'
-    }
-
-    return render(request, 'catalog/catalog.html', context)
+class PokemonListView(ListView):
+    model = Product
 
 
 def home_page(request):
     return render(request, 'catalog/home_page.html')
 
 
-def product(request, pk):
-    pokemon = get_object_or_404(Product, pk=pk)
+class PokemonDetailView(DetailView):
+    model = Product
 
-    context = {
-        'object': pokemon,
-        'title': f'Посмотри как прерасен {pokemon.name}'
-    }
 
-    return render(request, 'catalog/product.html', context)
+class BlogListView(ListView):
+    model = Blog
+
+
+class BlogCreateView(CreateView):
+    model = Blog
+    fields = ('blog_title', 'preview', 'body')
+    success_url = reverse_lazy('catalog:blog')
+
+
+class BlogDetailView(DetailView):
+    model = Blog
+
+
+class BlogUpdateView(UpdateView):
+    model = Blog
+    fields = ('blog_title', 'preview', 'body')
+    success_url = reverse_lazy('catalog:blog')
+
+
+class BlogDeleteView(DeleteView):
+    model = Blog
+    success_url = reverse_lazy('catalog:blog')
 
