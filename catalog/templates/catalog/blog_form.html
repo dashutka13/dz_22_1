@@ -9,11 +9,13 @@
                     <form method="post" enctype="multipart/form-data">
                         {% csrf_token %}
                         {{ form.as_p }}
-                        {% if object.is_published %}
-                        <button type="submit" class="btn btn-primary">Редактировать</button>
-                        {% else %}
-                        <button type="submit" class="btn btn-primary">Создать</button>
-                        {% endif %}
+                        <button type="submit" class="btn btn-primary">
+                            {% if object.is_published %}
+                            Редактировать
+                            {% else %}
+                            Создать
+                            {% endif %}
+                        </button>
                     </form>
                 </div>
             </div>
