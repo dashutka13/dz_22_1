@@ -29,13 +29,13 @@ class BlogListView(ListView):
 
 class BlogCreateView(CreateView):
     model = Blog
-    fields = ('blog_title', 'preview', 'body')
+    fields = ('blog_title', 'preview', 'body', 'date_of_creation')
     success_url = reverse_lazy('catalog:blog')
 
     def form_valid(self, form):
         if form.is_valid():
             new_blog = form.save()
-            new_blog.slug = slugify(new_blog.title)
+            new_blog.slug = slugify(new_blog.blog_title)
             new_blog.save()
         return super().form_valid(form)
 
