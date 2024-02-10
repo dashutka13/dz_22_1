@@ -12,9 +12,14 @@
         {% for object in object_list %}
         <div class="col">
             <div class="card shadow-sm">
+                {% if object.preview %}
 
                 <img class="card-img-top" src="{{ object.preview | mediapath }}" width="200" height="400"
                      alt="{{object}}">
+
+                {% else %}
+                <img class="card-img-top" src="{{ 'no_photo.jpg' | mediapath }}" width="200" height="400" alt="no_photo">
+                {% endif %}
 
                 <div class="card-body bg-warning">
                     <p class="text-uppercase fw-bolder">

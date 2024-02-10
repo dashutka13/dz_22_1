@@ -9,9 +9,12 @@
             <!-- Левая часть с изображением -->
             <div class="col">
                 <div class="card shadow-sm bg-warning ">
-
+                    {% if object.preview %}
                     <img class="card-img-top" src="{{ object.preview | mediapath }}" width="500" height="500"
                          alt="{{object}}">
+                    {% else %}
+                    <img src="{{ 'no_photo.jpg' | mediapath }}" alt="no_photo">
+                    {% endif %}
                 </div>
             </div>
             <!-- Правая часть с информацией-->
